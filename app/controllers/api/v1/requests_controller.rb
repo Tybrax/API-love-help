@@ -20,7 +20,7 @@ module Api
         @request = Request.new(request_params)
 
         if @request.save
-          render json: @request, status: :created, location: @request
+          render json: @request, status: :created
         else
           render json: @request.errors, status: :unprocessable_entity
         end
@@ -45,7 +45,7 @@ module Api
       private
         # Only allow a trusted parameter "white list" through.
         def request_params
-          params.fetch(:request, {})
+          params.permit(:title, :request_type, :description, :location)
         end
     end
   end
