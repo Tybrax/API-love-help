@@ -28,6 +28,7 @@ module Api
 
       # PATCH/PUT /requests/1
       def update
+        @request = Request.find(params[:id])
         if @request.update(request_params)
           render json: @request
         else
@@ -45,7 +46,7 @@ module Api
       private
         # Only allow a trusted parameter "white list" through.
         def request_params
-          params.permit(:title, :request_type, :description, :location)
+          params.permit(:title, :request_type, :description, :location, :fulfilled)
         end
     end
   end
