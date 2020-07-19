@@ -4,8 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  id: 1
+  title: first title
+  request_type: Material need
+  description: This is the description of the request. Keep in mind that the description is expected to exceed 30 characters in order to be added to the backend DB. Also, it's supposed to have a length inferior to 300 characters. Make sure it's the case to have a valid input.
+  location: 43.268498926, 5.39083177
+  fulfilled: false
+
+two:
+  id: 2
+  title: first title
+  request_type: One-time task
+  description: This is the description of the request. Keep in mind that the description is expected to exceed 30 characters in order to be added to the backend DB. Also, it's supposed to have a length inferior to 300 characters. Make sure it's the case to have a valid input.
+  location: 43.290165506, 5.36916519
+  fulfilled: false
