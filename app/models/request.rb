@@ -4,9 +4,8 @@ class Request < ApplicationRecord
     validates :title, :request_type, :description, :location, presence: true
 
     #Type
-    validates :title, :request_type, :description, :location, format: { with: /\A[a-zA-Z]+\z/,
-    message: "only allows letters" }
-    validates :id, numericality: { only_integer: true }
+    #validates :title, :description, format: { with: /\A[a-zA-Z]+\z/,
+    #message: "only allows letters" }
     validates :fulfilled, inclusion: [true, false]
 
     #Length

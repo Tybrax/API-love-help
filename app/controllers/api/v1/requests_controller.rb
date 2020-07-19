@@ -46,7 +46,7 @@ module Api
       private
         # Only allow a trusted parameter "white list" through.
         def request_params
-          params.permit(:title, :request_type, :description, :location, :fulfilled)
+          params.permit(:title, :request_type, :description, :location, :fulfilled, :request)
         end
     end
   end
